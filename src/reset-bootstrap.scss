@@ -1,0 +1,22 @@
+.container, .row > *{
+    padding: 0;
+}
+  
+@media (min-width: 1400px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 1140px;
+    }
+}
+
+.row {
+    margin: 0;
+}
+
+hr {
+    margin: 0;
+    opacity: 1;
+}
+
+p {
+    margin: 0;
+}
