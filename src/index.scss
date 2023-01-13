@@ -27,7 +27,9 @@ body {
         font-weight: 700;
         color: #fff;
     }
-    &-proposal {
+    &-proposal, &-description {
+        text-align: center;
+        font-size: 24px;
         margin-bottom: 20px;
     }
 }
