@@ -24,13 +24,14 @@ class App extends Component {
 
         const {data} = this.state;
         const recommendedProducts = data.filter(item => item.recommended === true)
+        const allCoffeeProducts = data.filter(item => item.recommended !== true)
 
         return (
             <div className="app">
                 <Router>
                     <Routes>
                         <Route exact path="/" element={<Home data={recommendedProducts} />}/>
-                        <Route exact path="/coffee" element={<Coffee data={data} />}/>
+                        <Route exact path="/coffee" element={<Coffee data={allCoffeeProducts} />}/>
                         <Route exact path="/pleasure"element={<Pleasure data={data} />}/>
                     </Routes>
                 </Router>

@@ -30,7 +30,7 @@ class Home extends Component {
                                 We makes every day full of energy and taste
                             </h2>
                             <h2 className="offset-4 col-4 offset4 description desire">Want to try our beans?</h2>
-                            <button variant="outline-primary" className="btn-home offset-5 col-2 offset-5">More</button>
+                            <a href="#best" variant="outline-primary" className="btn-home offset-5 col-2 offset-5">More</a>
                         </div>
                     </div>
                 </header>
@@ -58,7 +58,7 @@ class Home extends Component {
                         </div>
                     </div>
                 </section>
-                <section className="best">
+                <section className="best" id="best">
                     <div className="best-background">
                         <div className="container">
                             <div className="best-wrapper">

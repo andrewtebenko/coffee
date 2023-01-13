@@ -1,15 +1,15 @@
 import CardListItem from '../card-list-item/card-list-item';
 
-const CardList = ({data, onOpenDescription}) => {
+const CardList = ({data, onOpenProducts}) => {
     
     const elements = data.map((item) => {
         const {id, ...itemProps} = item;
-        if (onOpenDescription) {
+        if (onOpenProducts) {
             return (
                 <CardListItem 
                     key={id}
                     {...itemProps}
-                    onOpenDescription={() => onOpenDescription(id)}
+                    onOpenProducts={() => onOpenProducts(id)}
                 />
             )
         } else {
