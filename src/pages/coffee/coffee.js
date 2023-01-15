@@ -27,7 +27,8 @@ export class Coffee extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            isOpen: false
+            isOpen: false,
+            searchStr: ''
         }
     }
 
@@ -48,6 +49,7 @@ export class Coffee extends Component {
 
     render() {
         const {isOpen} = this.state;
+        const {onUpdateSearchProduct} = this.props;
         return (
             <>
                 <Header background={'/img/background-images/coffee-bg.png'} title={'Our Coffee'}/>
@@ -58,7 +60,7 @@ export class Coffee extends Component {
                     <>
                         <Proposal src={'img/component-images/girl.jpg'} alt={'girl'}
                             title={'About our beans'} p1={p1} p2={p2} />
-                        <CardFilter/>
+                        <CardFilter onUpdateSearchProduct={onUpdateSearchProduct}/>
                         <div className="offset-2 col-8 offset-2 coffee-wrapper">
                             <CardList data={this.props.data} onOpenProducts={this.onOpenProducts}/>
                         </div>
