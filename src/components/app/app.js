@@ -17,7 +17,8 @@ class App extends Component {
         super(props);
         this.state = {
             data: goods,
-            searchProduct: ''
+            searchProduct: '',
+            filterProduct: ''
         }
     }
 
@@ -30,24 +31,44 @@ class App extends Component {
         })
     }
 
+    filterCountry = (arrOfProducts, filterProduct) => {
+        switch(filterProduct) {
+            case 'Brazil':
+                return arrOfProducts.filter(item => item.country === 'Brazil')
+            case 'Kenya':
+                return arrOfProducts.filter(item => item.country === 'Kenya')
+            case 'Columbia':
+                return arrOfProducts.filter(item => item.country === 'Columbia')
+            default:
+                return arrOfProducts;
+        }
+    }
+
     onUpdateSearchProduct = (searchProduct) => {
         this.setState({searchProduct: searchProduct});
     }
 
+    onUpdateFilter = (filterProduct) => {
+        filterProduct === this.state.filterProduct ? this.setState({ filterProduct: '' }) : this.setState({ filterProduct });
+    }
+
     render() {
 
-        const {data, searchProduct} = this.state;
+        const {data, searchProduct, filterProduct} = this.state;
         const recommendedProducts = data.filter(item => item.recommended === true)
         const allCoffeeProducts = data.filter(item => item.recommended !== true)
-        const filteredProducts = this.searchProductFunc(searchProduct, allCoffeeProducts)
+        const filteredProducts = this.filterCountry(this.searchProductFunc(searchProduct, allCoffeeProducts), filterProduct)
 
         return (
             <div className="app">
                 <Router>
                     <Routes>
                         <Route exact path="/" element={<Home data={recommendedProducts} />}/>
-                        <Route exact path="/coffee" element={<Coffee data={filteredProducts} 
-                               onUpdateSearchProduct={this.onUpdateSearchProduct}/>}/>
+                        <Route exact path="/coffee" element={<Coffee 
+                               data={filteredProducts} 
+                               onUpdateSearchProduct={this.onUpdateSearchProduct}
+                               filterProduct={filterProduct}
+                               onUpdateFilter={this.onUpdateFilter}/>} />
                         <Route exact path="/pleasure"element={<Pleasure data={data} />}/>
                     </Routes>
                 </Router>

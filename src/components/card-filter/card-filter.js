@@ -18,6 +18,27 @@ class CardFilter extends Component {
     }
 
     render() {
+
+        const buttonsData = [
+            {name: 'Brazil', label: 'Brazil'},
+            {name: 'Kenya', label: 'Kenya'},
+            {name: 'Columbia', label: 'Columbia'}
+        ];
+
+        const buttons = buttonsData.map(({name, label}) => {
+            const activeClazz = this.props.filterProduct === name;
+            const clazz = activeClazz ? "activeClazz" : ""; 
+            return (
+                <button 
+                    type="button" 
+                    className={`btn btn-light filter-btn ${clazz}`}
+                    key={name}
+                    onClick={() => this.props.onUpdateFilter(name)}>
+                    {label}
+                </button>
+            )
+        })
+
         return(
             <div className="card-filter">
                 <div className="container">
@@ -31,9 +52,7 @@ class CardFilter extends Component {
                             <div className="filter">
                                 <label htmlFor="filter-block">Or filter</label>
                                 <div className="filter-block">
-                                    <button type="button" className="btn btn-light filter-btn">Brazil</button>
-                                    <button type="button" className="btn btn-light filter-btn">Kenya</button>
-                                    <button type="button" className="btn btn-light filter-btn">Columbia</button>
+                                    {buttons}
                                 </div>
                             </div>
                         </div>
