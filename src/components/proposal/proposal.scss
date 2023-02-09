@@ -1,9 +1,10 @@
 .proposal {
     padding: 70px 0px 30px 0px;
     &_wrapper {
+        margin: 0 auto;
         display: flex;
-        justify-content: space-around;
-        column-gap: 95px;
+        justify-content: center;
+        column-gap: 90px;
     }
     &_img {
         max-width: 272px;
@@ -21,5 +22,27 @@
         width: 240px;
         margin: 60px auto 0px;
         background: #000000;
+    }
+}
+
+@media (max-width: 992px) {
+    .proposal {
+        &_wrapper {
+            justify-content: space-between;
+            column-gap: 40px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .proposal {
+        &_wrapper {
+            justify-content: center;
+            flex-wrap: wrap;
+            row-gap: 60px;
+        }
+        &_img {
+            margin-left: 0;
+        }
     }
 }

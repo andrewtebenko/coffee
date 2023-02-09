@@ -4,7 +4,7 @@ const Header = ({background, title}) => {
 
     const backgroundStyles = {
         backgroundImage: `url(${background})`,
-        backgroundSize: '100%',
+        backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat'
     }
     
@@ -17,7 +17,7 @@ const Header = ({background, title}) => {
                             img={"./img/component-images/logo-white.png"} 
                             color={{color: "#ffffff"}} 
                     />
-                    <h1 className="offset-2 col-8 offset-2 title-header">{title}</h1>
+                    <h1 className="text-center mx-auto col-8 title-header">{title}</h1>
                 </div>
             </div>
         </header>

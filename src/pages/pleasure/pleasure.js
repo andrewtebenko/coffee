@@ -19,7 +19,7 @@ export class Pleasure extends Component {
                           alt={'coffee'}
                           title={'About our goods'}
                           p1={p1} p2={p2} />
-                <div className="offset-2 col-8 offset-2 coffee-wrapper">
+                <div className="col-8 coffee-wrapper">
                     <CardList data={this.props.data} />
                 </div>
                 <Footer />

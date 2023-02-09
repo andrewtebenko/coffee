@@ -5,6 +5,7 @@ import Beans  from '../../components/beans/beans';
 import CardList from '../../components/card-list/card-list';
 import Footer from '../../components/footer/footer';
 
+
 import './home.scss';
 
 class Home extends Component {
@@ -20,27 +21,27 @@ class Home extends Component {
                                     color={{color: "#ffffff"}} 
                             />
                             <hr className="col-12 line"/>
-                            <h1 className="offset-2 col-8 offset-2 title-main">
+                            <h1 className="text-center title-main">
                                 Everything You Love About Coffee
                             </h1>
                             <Beans color={{color: "#ffffff"}} 
                                    img={"./img/component-images/coffee-beans-white.png"}
                             />
-                            <h2 className="offset-3 col-6 offset3 description">
+                            <h2 className="text-center description">
                                 We makes every day full of energy and taste
                             </h2>
-                            <h2 className="offset-4 col-4 offset4 description desire">Want to try our beans?</h2>
-                            <a href="#best" variant="outline-primary" className="btn-home offset-5 col-2 offset-5">More</a>
+                            <h2 className="text-center description desire">Want to try our beans?</h2>
+                            <a href="#best" variant="outline-primary" className="btn-home col-2">More</a>
                         </div>
                     </div>
                 </header>
                 <section className="about">
                     <div className="container">
-                        <h2 className="offset-5 col-2 offset-5 title title-about">About Us</h2>
+                        <h2 className="text-center title title-about">About Us</h2>
                         <Beans color={{color: "#000000"}} 
                                img={"./img/component-images/coffee-beans-black.png"}
                         />
-                        <div className="offset-3 col-6 offset-3 description-about">
+                        <div className="col-6 description-about">
                             <p>
                                 Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.
                                 Afraid at highly months do things on at. Situation recommend objection do intention
@@ -63,7 +64,7 @@ class Home extends Component {
                         <div className="container">
                             <div className="best-wrapper">
                                 <h2 className="title-best">Our best</h2>
-                                <div className="offset-1 col-10 offset-1 card-wrapper">
+                                <div className="mx-auto col-xl-10 col-lg-12 card-wrapper">
                                     <CardList data={this.props.data} />
                                 </div>
                             </div>

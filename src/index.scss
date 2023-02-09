@@ -9,6 +9,7 @@ body {
     text-align: center;
     font-size: 24px;
     &-main {
+        line-height: 60px;
         margin-bottom: 20px;
         color: #fff;
         font-weight: 700;
@@ -23,7 +24,6 @@ body {
     }
     &-header {
         margin-bottom: 0;
-        text-align: center;
         font-weight: 700;
         color: #fff;
     }
@@ -43,6 +43,7 @@ body {
     font-weight: 700;
     &-about {
         display: flex;
+        margin: 0 auto;
         flex-direction: column;
         row-gap: 28px;
         font-size: 14px;
@@ -61,4 +62,31 @@ body {
 .desire {
     margin-top: 0;
     margin-bottom: 18px;
+}
+
+@media (max-width: 1200px) {
+    .desire {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .description {
+        &-about {
+            width: 90%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    header .description {
+        width: 90%;
+        margin: 35px auto 20px;
+        line-height: 45px;
+    }
+    .description {
+        &-proposal {
+            width: auto;
+        }
+    }
 }

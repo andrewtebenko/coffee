@@ -7,7 +7,7 @@ const Proposal = ({src, alt, title, p1, p2}) => {
         <section className="proposal">
             <div className="container">
                 <div className="row">
-                    <div className="proposal_wrapper offset-2 col-8 offset-2">
+                    <div className="proposal_wrapper col-10 col-md-12">
                         <img src={src} alt={alt} className="proposal_img"/>
                         <div className="proposal_description-wrapper">
                             <h2 className="title-proposal">{title}</h2>

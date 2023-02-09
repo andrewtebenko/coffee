@@ -7,7 +7,7 @@ const ProductDescription = ({src, title, country, isOpen, description, price}) =
         <div className="product">
             <div className="container">
                 <div className="row">
-                    <div className="offset-1 col-10 offset-1">
+                    <div className="col-xl-10 col-lg-12 m-auto">
                         <div className="product_wrapper">
                             <img src={src} alt="coffee" className="product-img"/>
                             <div className="product-description_block">

@@ -43,7 +43,7 @@ class CardFilter extends Component {
             <div className="card-filter">
                 <div className="container">
                     <div className="row">
-                        <div className="offset-2 col-8 offset-2 card-filter_wrapper">
+                        <div className="mx-auto col-xl-8 col-md-12 card-filter_wrapper">
                             <div className="search-wrapper">
                                 <label htmlFor="search-input">Looking for</label>
                                 <input type="text" className="search-input" id="search-input" value={this.state.searchStr} 

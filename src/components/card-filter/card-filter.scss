@@ -5,6 +5,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-wrap: wrap;
         label {
             font-size: 14px;
         }
@@ -55,4 +56,43 @@
     box-shadow: 1px 2px 3px rgb(28, 29, 28);
     border: none;
     outline: none;
+}
+
+@media (max-width: 992px) {
+    .filter {
+        column-gap: 18px;
+        &-block {
+            column-gap: 10px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .card-filter {
+        &_wrapper {
+            justify-content: center;
+            row-gap: 60px;
+        }
+    }
+    .filter {
+        &-block {
+            column-gap: 25px;
+        }
+        &-btn {
+            width: 80px;
+        }
+    }
+    .search-input {
+        height: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .filter {
+        flex-wrap: wrap;
+        row-gap: 20px;
+        &-block {
+            column-gap: 20px;
+        }
+    }
 }

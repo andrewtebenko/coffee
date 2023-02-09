@@ -8,7 +8,7 @@ const Footer = () => {
         <footer className="footer-wrapper">
             <div className="container">
                 <div className="row">
-                    <div className="offset-4 col-4 offset-4">
+                    <div className="mx-auto col-xl-4 col-lg-5 col-md-7">
                         <NavBar margin={{marginBottom: "30px"}} 
                                 transform={{transform: "translate(-6px, -6px)"}} 
                                 img={"./img/component-images/logo-black.png"} 

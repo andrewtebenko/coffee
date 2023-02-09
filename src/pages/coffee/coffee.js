@@ -64,7 +64,7 @@ export class Coffee extends Component {
                             onUpdateSearchProduct={onUpdateSearchProduct}
                             filterProduct={filterProduct}
                             onUpdateFilter={onUpdateFilter} />
-                        <div className="offset-2 col-8 offset-2 coffee-wrapper">
+                        <div className="col-8 coffee-wrapper">
                             <CardList data={this.props.data} onOpenProducts={this.onOpenProducts}/>
                         </div>
                     </>    
